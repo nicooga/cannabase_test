@@ -5,8 +5,8 @@ class Unit
   attr_accessor :strength_points
   attr_reader :id
 
-  def initialize
-    self.id = SecureRandom.uuid
+  def initialize(id: SecureRandom.uuid)
+    self.id = id
     self.strength_points = initial_strength_points
   end
 
@@ -48,9 +48,10 @@ class Unit
   end
 
   class Archer < self
-    def initial_strength_points() 5 end
+    def initial_strength_points() 10 end
     def training_cost() 20 end
     def training_benefit() 40 end
+    def upgrade_cost() 40 end
     def upgrades_to() Knight end
   end
 

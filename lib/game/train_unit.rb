@@ -8,7 +8,7 @@ class Game::TrainUnit < Game::UnitAction
 
   def perform
     player.gold -= unit.training_cost
-    unit.strength_points += unit
+    unit.strength_points += unit.training_benefit
     player.update_unit(unit)
   end
 end

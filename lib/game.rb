@@ -4,7 +4,7 @@ class Game
   attr_reader :players
 
   # @param players [Array<Player>] the initial players
-  def initialize(players)
+  def initialize
     self.players = {}
   end
 
